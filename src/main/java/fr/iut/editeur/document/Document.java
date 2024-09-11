@@ -1,13 +1,25 @@
 package fr.iut.editeur.document;
 
+/**
+ * Classe Document qui permet de gérer les documents
+ */
 public class Document {
 
+    /**
+     * Contient le texte du document
+     */
     private String texte;
 
+    /**
+     * Constructeur de la classe Document
+     */
     public Document() {
         this.texte = "";
     }
-	
+
+    /**
+     * @return le texte du document
+     */
     public String getTexte() {
         return texte;
     }
@@ -25,6 +37,12 @@ public class Document {
         return this.texte;
     }
 
+    /**
+     * Description de la méthode
+     * @param debut l'index du premier element à remplacer
+     * @param fin l'index du dernier element à remplacer
+     * @param remplacement la chaine de caractère à insérer à la place
+     */
     public void remplacer(int debut, int fin, String remplacement) {
         String partieGauche = texte.substring(0, debut);
         String partieDroite = texte.substring(fin + 1);
